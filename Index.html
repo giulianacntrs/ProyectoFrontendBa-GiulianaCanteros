@@ -4,30 +4,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0;url=https://giulianacntrs.github.io/ProyectoFrontendBa-GiulianaCanteros/Index.html" />
+  
   <title>Home</title>
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="Index.html">
-        <img src="/img/Kiss_Me.png" alt="KissMe" width="80" height="84">
+        <img src="/img/KissMe.png" alt="KissMe">
       </a>
       <ul class="navbar-nav">
         <li class="nav-item1">
-          <a class="nav-link active" type="button" aria-current="page" href="#">
-            <i class="fa-solid fa-shop" style="color: #ff0000;"></i>
+          <a class="nav-link active" type="button" aria-current="page" href="#tienda">
+            <i class="fa-solid fa-shop fa-xl" style="
+            color: #d72626;"></i>
           </a>
         </li>
         <li class="nav-item2">
-          <a class="btn" type="button" href="#"><i class="fa-solid fa-location-dot" style="color: #ff3099;"></i></a>
+          <a class="btn" type="button" href="#footer"><i class="fa-solid fa-location-dot fa-xl" style="
+            color: #d3287e;"></i></a>
         </li>
-        <li class="nav-item1">
-          <a class="nav-link" type="button" href="#"><i class="fa-solid fa-cart-shopping" style="color: #ff0000;"></i></a>
+        <li class="nav-item3">
+          <a class="nav-link" type="button" href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="
+            color: #d72626;"></i><span class="cantidad">0</span></a>
         </li>
       </ul>
     </div>
@@ -57,9 +62,9 @@
     </button>
   </div>
 
-  <!-- medios de pago -->
-  <section class="medios">
-    <div class="contenido-medios">
+
+   <section class="beneficios">
+    <div class="contenido-beneficios">
       <ul>
         <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512">
           <path
@@ -88,16 +93,39 @@
     </div>
     </ul>
 
+
+
   </section>
-  <!-- Tienda -->
-  <section class="tienda">
+
+  <section class="tienda" id="tienda">
     <h1>Tienda</h1>
-    <div class="contenido">
+    <div class="contenido-tienda">
       <div class="producto">
         <h4>Lipsgloss "Shine"</h4>
         <img src="./img/productos/2.jpg" alt="" height="200px" width="200px">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
         <h6>$4500</h6>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <h4>Lipstick "XOXO"</h4>
+        <img src="./img/productos/3.jpg" alt="" height="200px" width="200px">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        <h6>$3500</h6>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <h4>Lipstick "XOXO"</h4>
+        <img src="./img/productos/3.jpg" alt="" height="200px" width="200px">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        <h6>$3500</h6>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <h4>Lipstick "XOXO"</h4>
+        <img src="./img/productos/3.jpg" alt="" height="200px" width="200px">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        <h6>$3500</h6>
         <button>Agregar al carrito</button>
       </div>
 
@@ -110,7 +138,7 @@
       </div>
 
 
-      <div class="producto">
+     <div class="producto">
         <h4>Lipsgloss "Diamond"</h4>
         <img src="./img/productos/5.png" alt="5">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
@@ -141,13 +169,14 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
         <h6>$5000</h6>
         <button>Agregar al carrito</button>
-      </div>
-
+      </div> 
+   
 
     </div>
-  </section>
+  </section>  
 
-  <footer>
+
+  <footer id="footer">
     <ul>
       <h4>Ubicación</h4>
       <li> <iframe
@@ -182,6 +211,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <!-- el js se pone antes del body y despues del boostrap, solo si tengo una animación  -->
 </body>
 
 </html>

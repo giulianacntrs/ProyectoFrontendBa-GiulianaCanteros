@@ -1,20 +1,35 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Tilt+Neon&display=swap');
+
 * {
+    box-sizing: border-box;
     font-family: 'Tilt Neon', sans-serif;
 }
 
-.navbar {
-    margin-top: -20px;
+
+
+.navbar img {
+    width: 80px;
+    height: 84px;
+    transition: all 0.3s;
 }
 
-.navbar-nav .nav-item1 {
-    height: 1.4em;
+.navbar img:hover {
+    transform: scale(1.2);
 }
 
-.navbar-nav .nav-item2 {
-    fill: rgb(255, 0, 153);
+.navbar .nav-item {
+    width: max-content;
+    transition: all 0.3s;
 }
+
+span {
+    color: #ff0000;
+}
+
+.navbar .nav-item:hover {
+    transform: scale(1.2);
+}
+
 
 h4 {
     text-align: center;
@@ -26,43 +41,23 @@ h1 {
     text-align: center;
 }
 
+/* TIENDA */
 .tienda {
     color: red;
     background-color: #fac8e7;
     text-align: center;
     width: 1100px;
-    height: 1200px;
-
+    height: 1600px;
+    padding: 10px;
 }
 
-.contenido {
-    width: 1000px;
-    display: flex;
-    float: left;
-    flex-wrap: wrap;
-    padding-left: 100px;
+.contenido-tienda {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
 
-}
 
-.producto {
-    margin: 15px;
-    width: 30%;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: .4s;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(166, 52, 136, 0.569),
-        0 10px 10px rgba(255, 4, 184, 0.223);
-    background: #fea6dc;
-
-}
-
-.producto:hover {
-    box-shadow: 0 3px 6px rgba(255, 0, 144, 0.44);
-    transform: translate(0px, -10px);
 }
 
 .tienda img {
@@ -70,8 +65,8 @@ h1 {
     margin: 0 auto;
     display: block;
     border-radius: 10%;
-    height:200px;
-    width:170px;
+    height: 200px;
+    width: 170px;
 }
 
 .tienda h6 {
@@ -95,86 +90,10 @@ h1 {
     border-radius: 10px;
 }
 
-
-.medios {
-    fill: #ff0000;
-    background-color: #fac8e7;
-    color: red;
-    height: 400px;
-    text-align: center;
-}
-
-.medios .contenido-medios {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 100px;
-}
-
-ul {
-    list-style: none;
-    margin: 50px;
-}
-
-/* footer */
-footer {
-    text-align: center;
-    color: rgb(255, 221, 245);
-    fill: #ff0000;
-    background-color: #f971c5;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-=======
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Tilt+Neon&display=swap');
-* {
-    font-family: 'Tilt Neon', sans-serif;
-}
-
-.navbar {
-    margin-top: -20px;
-}
-
-.navbar-nav .nav-item1 {
-    height: 1.4em;
-}
-
-.navbar-nav .nav-item2 {
-    fill: rgb(255, 0, 153);
-}
-
-h4 {
-    text-align: center;
-    margin-top: 100px;
-}
-
-h1 {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.tienda {
-    color: red;
-    background-color: #fac8e7;
-    text-align: center;
-    width: 1100px;
-    height: 1200px;
-
-}
-
-.contenido {
-    width: 1000px;
-    display: flex;
-    float: left;
-    flex-wrap: wrap;
-    padding-left: 100px;
-
-
-}
-
+/* PRODUCTOS TIENDA */
 .producto {
     margin: 15px;
-    width: 30%;
+    width: 80%;
     box-sizing: border-box;
     text-align: center;
     border-radius: 20px;
@@ -192,51 +111,21 @@ h1 {
     transform: translate(0px, -10px);
 }
 
-.tienda img {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    border-radius: 10%;
-    height:200px;
-    width:170px;
-}
-
-.tienda h6 {
-    font-size: 26px;
-    text-align: center;
-    color: rgb(255, 0, 0);
-    margin: 0;
-}
-
-.tienda button {
-    text-align: center;
-    font-size: 24px;
-    color: #ffffff;
-    background-color: #f971c5;
-    width: 100%;
-    padding: 15px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    margin-top: 5px;
-    border-radius: 10px;
-}
-
-
-.medios {
+/* BENEFICIOS */
+.beneficios {
     fill: #ff0000;
     background-color: #fac8e7;
     color: red;
-    height: 400px;
+    font-size: 1rem;
     text-align: center;
 }
 
-.medios .contenido-medios {
-    display: flex;
-    flex-direction: row;
+.beneficios .contenido-beneficios {
+    /*     display: flex; */
     justify-content: center;
     padding: 100px;
 }
+
 
 ul {
     list-style: none;
@@ -252,5 +141,93 @@ footer {
     display: flex;
     flex-direction: row;
     padding: 20px;
->>>>>>> 6d3ce7c57866a2a70704c0b2b41c696e6f93f587
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 1000px) {
+    .beneficios .contenido-beneficios {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
+
+
+    .beneficios {
+        width: 100%;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .beneficios svg {
+        height: 1rem;
+        width: 2rem;
+    }
+
+    ul svg {
+        height: 1rem;
+    }
+
+    .navbar-nav .nav-item2 {
+        display: none;
+    }
+
+    .navbar-nav .nav-item1 {
+        display: none;
+    }
+
+    .tienda {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenido-tienda {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .producto {
+        font-size: 1rem;
+        margin-top: 100px;
+
+    }
+
+    .tienda img {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10%;
+    }
+
+    .tienda button {
+        font-size: 1rem;
+        width: 100%;
+
+    }
+
+    footer {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    footer iframe {
+        display: none;
+    }
+
+    footer .direccion {
+        display: block;
+        font-size: 10px;
+    }
+
+    footer li {
+        font-size: 10px;
+    }
 }
