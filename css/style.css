@@ -22,6 +22,11 @@
     transition: all 0.3s;
 }
 
+.navbar .nav-item:hover {
+    transform: scale(1.2);
+}
+
+
 span {
     color: #ff0000;
 }
@@ -41,42 +46,82 @@ h1 {
     text-align: center;
 }
 
-/* TIENDA */
-.tienda {
-    color: red;
-    background-color: #fac8e7;
-    text-align: center;
-    width: 1100px;
-    height: 1600px;
-    padding: 10px;
-}
-
-.contenido-tienda {
-    width: 100%;
+.lista {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
+    margin-top: 50px;
 
 
 }
 
-.tienda img {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    border-radius: 10%;
-    height: 200px;
-    width: 170px;
+.contenido-carrito {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 400px;
+    background-color:#fac8e7;
+    height: 100vh;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
-.tienda h6 {
-    font-size: 26px;
-    text-align: center;
-    color: rgb(255, 0, 0);
+.active .container {
+    left: calc(100% - 200px);
+}
+
+.active .contenido-carrito {
+    transform: translate(-200px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+}
+
+.contenido-carrito h3 {
+    color: #ff0000;
     margin: 0;
+    padding: 0 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
 }
 
-.tienda button {
+.contenido-carrito .ChekOut {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contenido-carrito .ChekOut div {
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 60px;
+    display: flex;
+ 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contenido-carrito .ChekOut div:nth-child(2) {
+    background-color: rgb(168, 0, 0);
+    color: #fac8e7;
+}
+
+/* TIENDA */
+.tienda {
+    background: #fac8e7;
+    height: 200vh;
+    width: 100%;
+    color: #ff0000;
+}
+
+.lista .item button {
     text-align: center;
     font-size: 24px;
     color: #ffffff;
@@ -90,14 +135,19 @@ h1 {
     border-radius: 10px;
 }
 
-/* PRODUCTOS TIENDA */
-.producto {
-    margin: 15px;
+.lista .item button:hover{
+    background-color: #ff0000;
+}
+/* Lista de productos */
+.lista .item {
+    margin: 55px;
     width: 80%;
+    height: 370px;
     box-sizing: border-box;
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
+    color: #ff0000;
     transition: .4s;
     padding-top: 10px;
     box-shadow: 0 14px 28px rgba(166, 52, 136, 0.569),
@@ -106,11 +156,69 @@ h1 {
 
 }
 
-.producto:hover {
+.lista .item:hover {
     box-shadow: 0 3px 6px rgba(255, 0, 144, 0.44);
     transform: translate(0px, -10px);
 }
 
+.lista .item .title {
+    font-weight: 600;
+}
+
+.lista .item .precio {
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.lista .item img {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10%;
+    height: 200px;
+    width: 170px;
+}
+
+
+.listaTienda li{
+    display: grid;
+    grid-template-columns: 100pc repeat(3, 1fr);
+    color: #ff0000;
+    background-color: rgb(23, 223, 63);
+    row-gap: 10px;
+}
+
+.listaTienda li div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.listaTienda li img{
+    width: 30%;
+}
+
+.listaTienda .contador{
+    margin: 0px 10px;
+    color: black;
+}
+.botonCard{
+    width: 28px;
+    height: 28px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
 /* BENEFICIOS */
 .beneficios {
     fill: #ff0000;
